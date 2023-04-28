@@ -18,16 +18,17 @@ app.get('/pokemon',(req,res) =>{
 
 app.get('/pokemon/:id', (req,res) =>{
      const id = req.params.id;
-    let pokemon = data.find(item => item.id = id );
-    console.log(id);
+     console.log(typeof id);
+    let pokemon =  data[Number(id)-1];
+    console.log(pokemon);
     res.send(pokemon);
     
 });
 
 app.get('/pokemon/:id/:info', (req,res) =>{
     const id = req.params.id;
-    let info = data.find(item => item.id= id);
-    res.send(info.base);
+    let info = data[Number(id)-1];
+    res.send(info);
 });
 
 app.listen(port, () => {
