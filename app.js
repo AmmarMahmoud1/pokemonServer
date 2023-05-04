@@ -8,7 +8,7 @@ const cors = require('cors');
 app.use(cors());
 
 app.get('/', (req,res) =>{
-    res.send('Hello from pokemonGO server');
+    res.send('Hello from pokemonGO server score');
 });
 
 app.get('/pokemon',(req,res) =>{
